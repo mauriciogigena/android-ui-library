@@ -1,0 +1,49 @@
+BOTTOM
+added in API level 1
+int BOTTOM
+Push object to the bottom of its container, not changing its size.
+
+Constant Value: 80 (0x00000050)
+
+CENTER
+added in API level 1
+int CENTER
+Place the object in the center of its container in both the vertical and horizontal axis, not changing its size.
+
+Constant Value: 17 (0x00000011)
+
+CENTER_HORIZONTAL
+added in API level 1
+int CENTER_HORIZONTAL
+Place object in the horizontal center of its container, not changing its size.
+
+Constant Value: 1 (0x00000001)
+
+CENTER_VERTICAL
+added in API level 1
+int CENTER_VERTICAL
+Place object in the vertical center of its container, not changing its size.
+
+Constant Value: 16 (0x00000010)
+
+LEFT
+added in API level 1
+int LEFT
+Push object to the left of its container, not changing its size.
+
+Constant Value: 3 (0x00000003)
+
+RIGHT
+added in API level 1
+int RIGHT
+Push object to the right of its container, not changing its size.
+
+Constant Value: 5 (0x00000005)
+
+TOP
+added in API level 1
+int TOP
+Push object to the top of its container, not changing its size.
+
+Constant Value: 48 (0x00000030)
+
