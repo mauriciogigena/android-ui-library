@@ -53,7 +53,11 @@
         "width": -1,
         "gravity": 17,
         "margins": {
+<<<<<<< HEAD
           "top": 20,
+=======
+          "top": 200,
+>>>>>>> develop
           "bottom": 0,
           "left": 35,
           "right": 35
