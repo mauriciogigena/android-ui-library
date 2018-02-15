@@ -1,0 +1,119 @@
+{
+  "components": [
+    {
+      "id": "1",
+      "type": "textview",
+      "componentParams": {
+        "height": -2,
+        "width": -1,
+        "gravity": 17,
+        "margins": {
+          "top": 0,
+          "bottom": 0,
+          "left": 35,
+          "right": 35
+        },
+        "paddings": {
+          "top": 10,
+          "bottom": 10,
+          "left": 10,
+          "right": 10
+        },
+        "textStyle": {
+          "textGravity": 1,
+          "textSize": 30,
+          "fontType": "fonts/beholder.ttf",
+          "textColor": "#000000",
+          "errorTextColor": "#FF0000",
+          "hintTextColor": "#C4C4C4"
+        },
+        "imageUrl": "",
+        "backgroundParams": {
+          "backgroundType": 0,
+          "backgroundColor": "#123456",
+          "borderColor": "#000000",
+          "borderAnchor": 2
+        }
+      },
+      "textContents": {
+        "title": "",
+        "text": "Ejemplo de TextView",
+        "hint": "",
+        "errorText": "",
+        "onClickText": ""
+      },
+      "subComponents": [],
+      "constraints": []
+    },
+    {
+      "id": "2",
+      "type": "textinputlayout",
+      "componentParams": {
+        "height": -2,
+        "width": -1,
+        "gravity": 17,
+        "margins": {
+          "top": 20,
+          "bottom": 0,
+          "left": 35,
+          "right": 35
+        },
+        "paddings": {
+          "top": 10,
+          "bottom": 10,
+          "left": 10,
+          "right": 10
+        },
+        "textStyle": {
+          "textGravity": 1,
+          "textSize": 30,
+          "fontType": "fonts/beholder.ttf",
+          "textColor": "#000000",
+          "errorTextColor": "#FF0000",
+          "hintTextColor": "#C4C4C4"
+        },
+        "imageUrl": "",
+        "backgroundParams": {
+          "backgroundType": 0,
+          "backgroundColor": "#123456",
+          "borderColor": "#000000",
+          "borderAnchor": 2
+        },
+        "inputConfig": {
+          "inputType": 671744,
+          "focus": true
+        }
+      },
+      "textContents": {
+        "title": "",
+        "text": "hola",
+        "hint": "Tu nombre",
+        "errorText": "",
+        "onClickText": ""
+      },
+      "subComponents": [],
+      "constraints": [
+        {
+          "errorMessage": "Mínimo 2 caracteres",
+          "type": "minLength",
+          "value": 2
+        },
+        {
+          "errorMessage": "Máximo 30 caracteres",
+          "type": "maxLength",
+          "value": 30
+        },
+        {
+          "errorMessage": "Ingresa solo letras y números",
+          "type": "regex",
+          "value": "^[a-zA-Z0-9 ]+$"
+        },
+        {
+          "errorMessage": "Completa este dato",
+          "type": "required",
+          "value": true
+        }
+      ]
+    }
+  ]
+}
