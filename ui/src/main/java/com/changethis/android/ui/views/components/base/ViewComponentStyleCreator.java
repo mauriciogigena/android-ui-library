@@ -10,12 +10,12 @@ import com.changethis.android.ui.model.dto.component.Component;
 import com.changethis.android.ui.model.dto.component.style.ViewComponentMargins;
 import com.changethis.android.ui.model.dto.component.style.ViewComponentPaddings;
 import com.changethis.android.ui.model.dto.component.style.ViewComponentParams;
-import com.changethis.android.ui.views.ComponentTypes;
-import com.changethis.android.ui.views.components.textinputlayout.CustomTextInputCreator;
+import com.changethis.android.ui.model.dto.component.annotations.ComponentTypes;
+import com.changethis.android.ui.views.components.input.CustomTextInputCreator;
 import com.changethis.android.ui.views.components.textview.CustomTextViewCreator;
 
-import static com.changethis.android.ui.views.ComponentTypes.TEXTINPUTLAYOUT;
-import static com.changethis.android.ui.views.ComponentTypes.TEXTVIEW;
+import static com.changethis.android.ui.model.dto.component.annotations.ComponentTypes.NORMAL_INPUT;
+import static com.changethis.android.ui.model.dto.component.annotations.ComponentTypes.TEXTVIEW;
 
 /**
  * Created by mgigena on 9/2/18.
@@ -41,7 +41,7 @@ public class ViewComponentStyleCreator {
                 customCreator = new CustomTextViewCreator(component.getComponentParams(), component.getTextContents(), context);
                 view = customCreator.create();
                 break;
-            case TEXTINPUTLAYOUT:
+            case NORMAL_INPUT:
                 customCreator = new CustomTextInputCreator(component.getComponentParams(), component.getTextContents(), context);
                 view = customCreator.create();
                 break;

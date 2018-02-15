@@ -6,24 +6,39 @@ package com.changethis.android.ui.model.dto.component.style;
 
 public class ViewComponentTextStyle {
     private final int textGravity;
+    private final int errorTextGravity;
     private final int textSize;
-    private final String fontType;
+    private final int errorTextSize;
+    private final int titleTextSize;
+    private final String fontTypeface;
+    private final String titleFontTypeface;
+    private final String errorFontTypeface;
     private final String textColor;
     private final String errorTextColor;
     private final String hintTextColor;
 
     /**
-     * @param textGravity    check android Gravity.class
-     * @param textSize       set it in px
-     * @param textColor      set it in hex, parse to int before change color
-     * @param fontType       check @interface FontTypes
-     * @param errorTextColor set it in hex, parse to int before change color
-     * @param hintTextColor  set it in hex, parse to int before change color
+     * @param textGravity       check android Gravity.class
+     * @param errorTextGravity
+     * @param textSize          set it in px
+     * @param errorTextSize
+     * @param titleTextSize
+     * @param fontTypeface      check @interface FontTypes
+     * @param titleFontTypeface
+     * @param errorFontTypeface
+     * @param textColor         set it in hex, parse to int before change color
+     * @param errorTextColor    set it in hex, parse to int before change color
+     * @param hintTextColor     set it in hex, parse to int before change color
      */
-    public ViewComponentTextStyle(int textGravity, int textSize, String fontType, String textColor, String errorTextColor, String hintTextColor) {
+    public ViewComponentTextStyle(int textGravity, int errorTextGravity, int textSize, int errorTextSize, int titleTextSize, String fontTypeface, String titleFontTypeface, String errorFontTypeface, String textColor, String errorTextColor, String hintTextColor) {
         this.textGravity = textGravity;
+        this.errorTextGravity = errorTextGravity;
         this.textSize = textSize;
-        this.fontType = fontType;
+        this.errorTextSize = errorTextSize;
+        this.titleTextSize = titleTextSize;
+        this.fontTypeface = fontTypeface;
+        this.titleFontTypeface = titleFontTypeface;
+        this.errorFontTypeface = errorFontTypeface;
         this.textColor = textColor;
         this.errorTextColor = errorTextColor;
         this.hintTextColor = hintTextColor;
@@ -38,8 +53,8 @@ public class ViewComponentTextStyle {
         return textSize;
     }
 
-    public String getFontType() {
-        return fontType;
+    public String getFontTypeface() {
+        return fontTypeface;
     }
 
     public String getTextColor() {
@@ -50,7 +65,27 @@ public class ViewComponentTextStyle {
         return errorTextColor;
     }
 
-    public String getHintTextColor() {
+    public String     getHintTextColor() {
         return hintTextColor;
+    }
+
+    public int getErrorTextGravity() {
+        return errorTextGravity;
+    }
+
+    public int getErrorTextSize() {
+        return errorTextSize;
+    }
+
+    public int getTitleTextSize() {
+        return titleTextSize;
+    }
+
+    public String getTitleFontTypeface() {
+        return titleFontTypeface;
+    }
+
+    public String getErrorFontTypeface() {
+        return errorFontTypeface;
     }
 }

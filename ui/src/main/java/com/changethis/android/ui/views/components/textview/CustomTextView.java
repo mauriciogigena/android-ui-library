@@ -8,7 +8,7 @@ import com.changethis.android.ui.model.dto.component.Component;
 import com.changethis.android.ui.views.components.base.ViewComponentFactory;
 import com.changethis.android.ui.views.components.base.ViewComponentStyleCreator;
 
-import static com.changethis.android.ui.views.ComponentTypes.TEXTVIEW;
+import static com.changethis.android.ui.model.dto.component.annotations.ComponentTypes.TEXTVIEW;
 
 /**
  * Created by mgigena on 7/2/18.

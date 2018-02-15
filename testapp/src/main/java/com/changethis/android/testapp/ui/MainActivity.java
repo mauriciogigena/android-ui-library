@@ -10,11 +10,11 @@ import com.changethis.android.testapp.utils.Components;
 import com.changethis.android.testapp.utils.JsonProcessor;
 import com.changethis.android.ui.model.dto.component.Component;
 import com.changethis.android.ui.views.components.base.ViewComponentFactory;
-import com.changethis.android.ui.views.components.textinputlayout.CustomTextInput;
+import com.changethis.android.ui.views.components.input.CustomTextInput;
 import com.changethis.android.ui.views.components.textview.CustomTextView;
 
-import static com.changethis.android.ui.views.ComponentTypes.TEXTINPUTLAYOUT;
-import static com.changethis.android.ui.views.ComponentTypes.TEXTVIEW;
+import static com.changethis.android.ui.model.dto.component.annotations.ComponentTypes.NORMAL_INPUT;
+import static com.changethis.android.ui.model.dto.component.annotations.ComponentTypes.TEXTVIEW;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                     factory = new CustomTextView();
                     viewToAdd = factory.crateView(this, component);
                     break;
-                case TEXTINPUTLAYOUT:
+                case NORMAL_INPUT:
                     factory = new CustomTextInput();
                     viewToAdd = factory.crateView(this, component);
                     break;

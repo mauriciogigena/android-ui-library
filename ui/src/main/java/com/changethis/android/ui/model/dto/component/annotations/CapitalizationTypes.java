@@ -1,11 +1,11 @@
-package com.changethis.android.ui.model.dto.component;
+package com.changethis.android.ui.model.dto.component.annotations;
 
 import android.support.annotation.StringDef;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import static com.changethis.android.ui.model.dto.component.CapitalizationTypes.WORD;
+import static com.changethis.android.ui.model.dto.component.annotations.CapitalizationTypes.WORD;
 
 
 /**

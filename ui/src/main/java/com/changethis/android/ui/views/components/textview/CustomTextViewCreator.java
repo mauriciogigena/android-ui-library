@@ -3,7 +3,6 @@ package com.changethis.android.ui.views.components.textview;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.support.annotation.NonNull;
 import android.widget.TextView;
 
 import com.changethis.android.ui.model.dto.component.ComponentTextContents;
@@ -20,11 +19,14 @@ public class CustomTextViewCreator implements ViewComponentFactory.CustomCreator
     private final ViewComponentParams params;
     private final ComponentTextContents textContents;
     private final Context context;
+    private final ViewComponentTextStyle textStyle;
+    private TextView textView;
 
     public CustomTextViewCreator(ViewComponentParams params, ComponentTextContents textContents, Context context) {
         this.params = params;
         this.textContents = textContents;
         this.context = context;
+        textStyle = params.getTextStyle();
     }
 
     /**
@@ -32,29 +34,29 @@ public class CustomTextViewCreator implements ViewComponentFactory.CustomCreator
      */
     @Override
     public TextView create() {
-        TextView view = new TextView(context);
-        ViewComponentTextStyle textStyle = params.getTextStyle();
-        setTextColor(view, textStyle.getTextColor());
-        setTextFont(context, view, textStyle.getFontType());
-        setTextGravity(view, textStyle.getTextGravity());
-        setTextSize(view, textStyle.getTextSize());
-        view.setText(textContents.getText());
-        return view;
+        textView = new TextView(context);
+        textView.setText(textContents.getText());
+        setTextColor();
+        setTextFont();
+        setTextGravity();
+        setTextSize();
+        return textView;
     }
 
-    private void setTextSize(TextView textView, int textSize) {
-        textView.setTextSize(textSize);
+    private void setTextSize() {
+        textView.setTextSize(textStyle.getTextSize());
     }
 
-    private void setTextGravity(TextView textView, int textGravity) {
-        textView.setGravity(textGravity);
+    private void setTextGravity() {
+        textView.setGravity(textStyle.getTextGravity());
     }
 
-    private void setTextColor(TextView textView, @NonNull String textColor) {
-        textView.setTextColor(Color.parseColor(textColor));
+    private void setTextColor() {
+        textView.setTextColor(Color.parseColor(textStyle.getTextColor()));
     }
 
-    private void setTextFont(Context context, TextView textView, @NonNull String textFont) {
+    private void setTextFont() {
+        String textFont = textStyle.getFontTypeface();
         if (textFont != null && !textFont.isEmpty()) {
             Typeface face = Typeface.createFromAsset(context.getAssets(),
                     textFont);
